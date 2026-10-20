@@ -1,0 +1,14 @@
+version: 2
+
+# The relay has no dependencies, so only the actions in the workflow are updated.
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ['*']
+    commit-message:
+      prefix: ci
